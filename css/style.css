@@ -1,0 +1,879 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    line-height: 0.8;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* ===============================Preloader Part Start Here=============================== */
+.preloader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background-color: #dfd9db;
+}
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+  }
+  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+  
+  .load :first-child{background:#19A68C;animation-delay:-1.5s}
+  .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .load :last-child{background:#193B48}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+  }
+/* ===============================Navbar Part Start Here=============================== */
+nav{
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.bg{
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    height: 95px;
+    z-index: 99999;
+    transition: all linear 0.8s;
+    animation: bg 1s;
+}
+@keyframes bg {
+    from{top:-100px}
+    to{top: 0;}
+} 
+
+.menu-main{
+    padding: 0 70px;
+    display: flex;
+    z-index: 999999;
+    margin: 0 auto;
+}
+.logo{
+    width: 305px;
+    
+    padding-top: 50px;
+}
+.menu{
+    width: 1475px;
+    
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+    /* padding-left: 25px; */
+    padding: 50px 0 50px 25px;
+}
+.menu ul li a {
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: all linear 0.5s;
+    position: relative;
+}
+.menu ul li a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color:#fce38a;
+    bottom: -12px;
+    left: 0;
+    opacity: 0;
+    transition: all linear .3s;
+}
+.menu ul li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+.menu ul li a:hover{
+    color: #f26957;
+    transition: all linear 0.5s;
+   
+}
+
+/* ===============================Banner Part Start Here=============================== */
+
+/* ======Sub: Banner Wow JS CSS Start here======= */
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+/* ======Sub: Banner Wow JS CSS End here======= */
+
+#banner{
+    /* background-image: url(../images/banner1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    
+    width: 100%;
+    position: relative;
+}
+/* .banner-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+} */
+
+.b-slider-item{
+    width: 100%;
+    height: 950px;
+    line-height: 0%;
+}
+.banner-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    
+}
+.banner-text h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-top: 365px;
+}
+.banner-text h1{
+    font-size: 92px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 25px;
+    padding-bottom: 66px;
+    padding-left: 120px;
+    padding-right: 120px;
+    line-height: 110px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.banner-text a{
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding: 20px 55px;
+    background-color: #f26957;
+    border: none;
+    
+}
+/* ===============================Skill Part Start Here=============================== */
+#skill{
+    padding: 130px 0;
+}
+.section-heading{
+   text-align: center;
+}
+.section-heading h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #878787;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+.section-heading h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+    padding-top: 31px;
+}
+.section-heading h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding: 28px 225px 0 225px;
+}
+.skill-main{
+    padding-top: 62px;
+    display: flex;
+    justify-content: space-between;
+}
+.skill-item{
+    width: 370px;
+    
+}
+.skill-item h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 33px;
+}
+.skill-item p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.skill-item a{
+    font-size: 13px;
+    font-weight: 700;
+    color: #444;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 40px;
+}
+/* ===============================Service Part Start Here=============================== */
+#service{
+    padding: 130px 0;
+    background-color: #f6f6f6;
+}
+.service-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 60px;
+}
+.service-item{
+    width: 370px;
+    background-color: #fff;
+    padding: 60px 40px 51px 40px;
+    transition: all linear 0.5s;
+}
+.service-item:hover{
+    -webkit-box-shadow: 1px 1px 41px 14px rgba(0,0,0,0.37); 
+    box-shadow: 1px 1px 41px 14px rgba(0,0,0,0.37);
+}
+.service-item h2{
+    font-size: 19px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 26px;  
+}
+.service-item p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding-top: 30px;  
+}
+.mx-30{
+    height: 30px;
+    width: 100%;
+}
+/* ===============================Works Part Start Here=============================== */
+#work{
+    padding: 130px 0 72px 0;
+}
+#work .container h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: #878787;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+} 
+.work-sub-main{
+    display: flex;
+}
+.work-sub-text{
+    width: 35%;
+}
+.work-sub-text h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 30px;
+}
+.work-sub-menu{
+    width: 65%;
+    text-align: right;
+}
+.work-sub-menu ul li{
+    display: inline-block;
+    padding-top: 55px;
+    
+}
+.work-sub-menu ul li a {
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #878787;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: all linear 0.5s;
+}
+.work-sub-menu ul li a:hover{
+    color: #f26957;
+    transition: all linear 0.5s;
+   
+}
+
+/* ===============================Works Gallary Part Start Here=============================== */
+#works-gal{
+    width: 100%;
+    
+    padding: 0 60px 130px 60px;
+}
+#works-gal .container{
+    width: 1780px;
+    margin: 0 auto;
+  
+}
+.gal-main{
+    display: flex;
+    justify-content: space-between;
+}
+.gal-left{
+    width: 1055px;
+}
+.left-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.gal-left-item{
+    line-height: 0;
+    width: 332px;
+    position: relative;
+}
+.gal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+.gal-overlay i{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    background-color: rgb(243, 123, 11);
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    transition: all linear 0.1s;
+}
+.gal-left-item:hover .gal-overlay{
+    opacity: 1;
+}
+.gal-overlay a i:hover{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+}
+.left-bottom .gal-left-item img{
+    line-height: 0;
+}
+
+.gal-right{
+    width: 695px;
+    line-height: 0;
+}
+
+/* ===============================Count Part Start Here=============================== */
+#count{
+    background-color: #333;
+    padding: 100px 0;
+}
+.count-main{
+    display: flex;
+    justify-content: space-between;
+}
+.count-item{
+    width: 270px;
+    text-align: center;
+}
+.count-item h2{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    position: relative;
+}
+.count-item h2::after{
+    content:'';
+    background-color: #f38181;
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    margin-top: 44px;
+    left: 50%;
+    transform: translateX(-50%)   ;
+    -webkit-transform: translateX(-50%)   ;
+    -moz-transform: translateX(-50%)   ;
+    -ms-transform: translateX(-50%)   ;
+    -o-transform: translateX(-50%)   ;
+}
+.count-item h4{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #d8d8d8;
+    padding-top: 35px;
+}
+/* ===============================Best Stuff Part Start Here=============================== */
+#stuff{
+    padding: 130px 0;
+}
+.stuff-main{
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+}
+.stuff-item{
+    width: 370px;
+    margin-top: 60px;  
+    position: relative;
+}
+.stuff-item-overlay{
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+.overlay-item p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 290px;
+    padding-left: 52px;
+    padding-right: 52px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.overlay-item a{
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.stuff-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.overlay-item a i{
+    font-size: 25px;
+    font-weight: 500;
+    color: #010101;
+    padding: 11px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all linear 0.5s;
+}
+.overlay-item a i:hover{
+    background-color: #f26957;
+    color: #fff;
+    border: 1px solid #f26957;
+}
+.stuff-item-overlay:hover{
+    opacity: 1;
+}
+.stuff-details{
+    text-align: center;
+}
+.stuff-details h2{
+    font-size: 22px;
+    font-weight: 400;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 29px;
+}
+.stuff-details h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 14px;
+
+}
+/* ===============================Sinax Design Part Start Here=============================== */
+#sinax-design{
+    background-color: #f6f6f6;
+}
+.design-main{
+    display: flex;
+}
+.design-left{
+    width: 50%;
+    height: 700px;
+}
+.design-right{
+    width: 50%;
+}
+.design-right-text{
+    margin-left: 97px;
+}
+.design-right-text h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #878787;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-top: 152px;
+}
+.design-right-text h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 50px;
+    padding-top: 29px;
+    padding-right: 250px;
+}
+.design-right-text h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 71px;
+}
+.design-right-text a{
+    font-size: 14;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 20px 55px;
+    background-color: #f26957;
+    border: none;
+}
+/* ===============================Brand Part Start Here=============================== */
+#brand{
+    padding: 120px 0;
+}
+.brand-main{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.brand-item{
+    width: 110px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===============================News Part Start Here=============================== */
+#news{
+    background-color: #f6f6f6;
+    padding: 130px 0;
+}
+.news-main{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.news-item{
+    width: 370px;
+    background-color: #fff;
+}
+.news-content{
+    padding: 40px 30px;
+}
+.news-content h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+}
+.news-content h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.news-abc{
+    color: #f37667;
+}
+.news-content p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 28px;
+    line-height: 26px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.news-content p::after{
+    content:'';
+    background-color: #ddd;
+    width: 311px;
+    height: 1px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+
+}
+.news-content a{
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+   
+}
+/* ===============================Footer Part Start Here=============================== */
+#footer{
+    background-color: #222;
+    padding: 100px 0;
+}
+.footer-main{
+    display: flex;
+}
+.social{
+    width: 600px;
+    
+}
+.social p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #bdbdbd;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 37px;
+    padding-right: 250px;
+    line-height: 26px;
+    padding-bottom: 20px;
+}
+.social a{
+    padding-right: 10px;
+}
+.social a i{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding: 11px;
+    border: none;
+    border-radius: 50%;
+    background-color: #353333;
+    transition: all linear 0.5s;
+}
+.social a i:hover{
+    border: none;
+    color: #fff;
+    background-color: #f26957;
+}
+.post{
+    width: 300px;
+
+}
+.post h2{
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.post h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #bdbdbd;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding-top: 40px;
+    padding-right: 35px;
+}
+.post h4{
+    font-size: 13px;
+    font-weight: 400;
+    color: #6d6d6d;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 10px;
+}
+.subscribe{
+    width: 270px;
+
+}
+.subscribe h2{
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.subscribe h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #bdbdbd;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 26px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    
+}
+.input-fild input{
+    width: 100%;
+    height: 45px;
+    background: #3f3f3f;
+    border: none;
+    position: relative;
+}
+.input-fild input[type=email] {
+    color: cornsilk;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.subscribe a i{
+    position: absolute;
+    bottom: -7184px;
+    right: 100px;
+    color: #8e8e8e;
+    font-size: 25px;
+    font-weight: 500;
+    z-index: 6666;
+
+}
+
+/* ===============================Bottom to top End Part Start Here=============================== */
+.bottom-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    /* display: none; */
+}
+.bottom-to-top i{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(213, 10, 81, 0.664);
+    border-radius: 50%;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;  
+}
+.bottom-to-top i:hover{
+    background-color: #aa0234;
+    color: #fff;
+    transition: all linear 0.5s;
+}
+/* ===============================Footer End Part Start Here=============================== */
+#footer-end{
+    background-color: #2e2e2e;
+}
+.end-main{
+    display: flex;
+}
+.end-left{
+    width: 50%;
+    padding: 35px 0;
+}
+.end-left p{
+    color: #9f9f9f;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+}
+.end-right{
+    width: 50%;
+    text-align: right;
+}
+.end-right ul li{
+    display: inline-block;
+    text-align: right;
+    padding-left: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.end-right ul li a{
+    color: #9f9f9f;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+    transition: all linear 0.5s;
+}
+.end-right ul li a:hover{
+    color: #fff;
+}
+/* ===============================Navbar Part Start Here=============================== */
+/* ===============================Navbar Part Start Here=============================== */
+/* ===============================Navbar Part Start Here=============================== */
+/* ===============================Navbar Part Start Here=============================== */
+/* ===============================Navbar Part Start Here=============================== */
+/* ===============================Navbar Part Start Here=============================== */
